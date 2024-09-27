@@ -8,23 +8,23 @@
  */
 char *duplicateString(const char *original)
 {
-    char *copy;
-    int i, size = 0;
+	char *copy;
+	int i, size = 0;
 
-    if (original == NULL)
-        return (NULL);
-    while (*original != '\0')
-    {
-        size++;
-        original++;
-    }
-    original -= size;
-    copy = malloc(sizeof(char) * (size + 1));
-    if (copy == NULL)
-        return (NULL);
-    for (i = 0; i <= size; i++)
-        copy[i] = original[i];
-    return (copy);
+	if (original == NULL)
+		return (NULL);
+	while (*original != '\0')
+	{
+		size++;
+		original++;
+	}
+	original -= size;
+	copy = malloc(sizeof(char) * (size + 1));
+	if (copy == NULL)
+		return (NULL);
+	for (i = 0; i <= size; i++)
+		copy[i] = original[i];
+	return (copy);
 }
 
 /**
@@ -35,11 +35,11 @@ char *duplicateString(const char *original)
  */
 int stringLength(char *str)
 {
-    int len = 0;
+	int len = 0;
 
-    while (str[len])
-        len++;
-    return (len);
+	while (str[len])
+		len++;
+	return (len);
 }
 
 /**
@@ -51,18 +51,18 @@ int stringLength(char *str)
  */
 int stringCompare(char *str1, char *str2)
 {
-    int comparison;
+	int comparison;
 
-    comparison = (int)*str1 - (int)*str2;
-    while (*str1)
-    {
-        if (str1 != str2)
-            break;
-        str1++;
-        str2++;
-        comparison = (int)*str1 - (int)*str2;
-    }
-    return (comparison);
+	comparison = (int)*str1 - (int)*str2;
+	while (*str1)
+	{
+		if (str1 != str2)
+			break;
+		str1++;
+		str2++;
+		comparison = (int)*str1 - (int)*str2;
+	}
+	return (comparison);
 }
 
 /**
@@ -74,15 +74,15 @@ int stringCompare(char *str1, char *str2)
  */
 char *stringCopy(char *dest, char *src)
 {
-    int i = 0;
+	int i = 0;
 
-    while (src[i])
-    {
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-    return (dest);
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 /**
@@ -94,16 +94,16 @@ char *stringCopy(char *dest, char *src)
  */
 char *stringConcat(char *dest, char *src)
 {
-    char *ptr = dest;
+	char *ptr = dest;
 
-    while (*ptr)
-        ptr++;
-    while (*src)
-    {
-        *ptr = *src;
-        ptr++;
-        src++;
-    }
-    *ptr = '\0';
-    return (dest);
+	while (*ptr)
+		ptr++;
+	while (*src)
+	{
+		*ptr = *src;
+		ptr++;
+		src++;
+	}
+	*ptr = '\0';
+	return (dest);
 }
